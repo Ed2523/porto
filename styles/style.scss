@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+nav{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height: 10vh;
+}
+.nav-links{
+    flex:1 1 20rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    a{
+        font-size: 2.5rem;
+        text-decoration: none;
+        color: black;
+    }
+    li{
+        list-style-type: none;
+    }
+    .active{
+        background-color: rgba(5, 15, 46, 0.829);
+        color: white;
+        padding: 1rem 3rem;
+        border-radius: 2rem;
+    }
+}
+.logo{
+    display: flex;
+    align-items: center;
+    flex:1 1 20rem;
+    cursor: pointer;
+    h1{
+        font-size: 2.5rem;
+    }
+    img{
+        min-height: 5rem;
+        width: 5rem;
+        margin-right: 1.5rem;
+    }
+}
+.section-intro{
+    min-height: 90vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.intro-text {
+    
+    h2{
+       font-size: 3.5rem;
+    }
+    h3{
+        
+       font-size: 3rem;
+       padding: 0.5rem 0  1rem 0;
+    }
+    p{
+      font-size: 3rem;
+      color: gray;
+    }
+}
+.intro-text, .intro-images{
+    flex: 1 1 40rem;
+    overflow: hidden;
+}
+#clockHand{
+    animation: clock 1.5s infinite linear;
+    transform-box: fill-box;// The object bounding box is used as the reference box.
+  transform-origin: bottom;
+}
+@keyframes clock{
+    from{
+       transform: rotateZ(0deg);
+    }
+    to{
+   
+        transform: rotateZ(360deg)
+    }
+}
+#avatarBody{
+    animation: avatarMovement 1.5s infinite alternate ease-in-out;
+}
+@keyframes avatarMovement{
+    from{
+        transform: translateY(0%);
+    }
+    to{
+  
+        transform: translateY(1%);
+    }
+}
+
+
+
+.main-section{
+    position: relative;
+  
+    .scroll-up-container{
+       width: 40%;
+       min-height: 220vh;
+       z-index: 1;
+       position: absolute;
+       bottom: 0;
+       right: 0;
+
+            .scroll-up-wrapper{
+                       
+                width: 100%;
+                min-height: 220vh;
+                position: relative;
+                
+                
+                    .scroll-up{
+                         height: 5rem;
+                         width: 3rem;
+                         border: 0.2rem solid black;
+                         border-radius: 3rem;
+                         position:sticky;
+                         top: 90%;
+                         left: 95%;
+                         z-index: 2;
+                         cursor: pointer;
+                     }
+                     .scroll-up::before,
+                     .scroll-up::after{
+                       content: '';
+                       position: absolute;
+                       border: 0.2rem solid black;
+                       top: 80%;
+                       left: 50%;
+                       height: 1rem;
+                       width: 1rem;
+                       transform: translate(-50%, -50%) rotate(45deg);
+                       border-bottom: transparent;
+                       border-right: transparent;
+                       animation: arrowAnimation 1s  ease-in-out infinite; 
+                       z-index: 3;
+                    }
+                     .scroll-up::before{
+                         top: 90%;
+                         animation-delay: .2s;
+                     }
+                     @keyframes arrowAnimation {
+                         0%{
+                             opacity: 0;
+                         }
+                         30%{
+                             opacity: 1;
+                         }
+                         60%{
+                             opacity: 1;
+                         }
+                         100%{
+                            opacity: 0;
+                            top: 20%;
+                         } 
+                     }
+            }
+
+    }
+   
+    .section-about{
+        min-height: 100vh;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        .about-image, .about-text{
+            flex: 1 1 40rem;
+            overflow: hidden;
+        }
+        .about-text{
+            h3{
+        
+                font-size: 3rem;
+                padding: 0.5rem 0  1rem 0;
+             }
+             p{
+               font-size: 3rem;
+               color: gray;
+             }
+        }
+    }
+    .section-projects{
+        min-height: 100vh;
+        background-color: rgb(30, 195, 210);
+    }
+    .section-contact{
+        min-height: 100vh;
+        background-color: aqua
+    }
+    
+    
+}
+
+
+@import "mobile";

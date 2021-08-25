@@ -1,0 +1,95 @@
+@media screen and (max-width: 890px) {
+  .nav-links {
+    background: rgba(0, 0, 0, 0.918);
+    position: fixed;
+    left: 0;
+    bottom: 200%;
+    height: 50%;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 0.7s ease-in-out;
+    transition: 0.7s ease-in-out;
+  }
+  .nav-links a {
+    color: white;
+  }
+  .nav-links .active {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .nav-links.open {
+    position: fixed;
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+    height: 100%;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .intro-text h3 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .intro-text p {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .burger {
+    cursor: pointer;
+    z-index: 3;
+    margin: auto;
+  }
+  .burger-element {
+    padding: 0.15rem 1.8rem;
+    background-color: black;
+    margin: 0.7rem 0rem;
+    display: block;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+  #burger-span1.open {
+    -webkit-transform: rotateZ(-45deg) translateY(450%);
+            transform: rotateZ(-45deg) translateY(450%);
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    background-color: white;
+  }
+  #burger-span2.open {
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+  }
+  #burger-span3.open {
+    -webkit-transform: rotateZ(45deg) translateY(-450%);
+            transform: rotateZ(45deg) translateY(-450%);
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    background-color: white;
+  }
+  .scroll-up-container {
+    min-height: 215vh;
+  }
+  .scroll-up-container .scroll-up-wrapper {
+    min-height: 215vh;
+  }
+  .scroll-up-container .scroll-up-wrapper .scroll-up {
+    margin-right: 10%;
+  }
+  svg {
+    width: 100%;
+    min-height: 40vh;
+  }
+}
+/*# sourceMappingURL=mobile.css.map */

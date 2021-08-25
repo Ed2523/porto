@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
+}
+
+nav {
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 10vh;
+}
+
+.nav-links {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-links a {
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-links li {
+  list-style-type: none;
+}
+
+.nav-links .active {
+  background-color: rgba(5, 15, 46, 0.829);
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+  cursor: pointer;
+}
+
+.logo h1 {
+  font-size: 2.5rem;
+}
+
+.logo img {
+  min-height: 5rem;
+  width: 5rem;
+  margin-right: 1.5rem;
+}
+
+.section-intro {
+  min-height: 90vh;
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.intro-text h2 {
+  font-size: 3.5rem;
+}
+
+.intro-text h3 {
+  font-size: 3rem;
+  padding: 0.5rem 0  1rem 0;
+}
+
+.intro-text p {
+  font-size: 3rem;
+  color: gray;
+}
+
+.intro-text, .intro-images {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  overflow: hidden;
+}
+
+#clockHand {
+  -webkit-animation: clock 1.5s infinite linear;
+          animation: clock 1.5s infinite linear;
+  transform-box: fill-box;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+@-webkit-keyframes clock {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes clock {
+  from {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+#avatarBody {
+  -webkit-animation: avatarMovement 1.5s infinite alternate ease-in-out;
+          animation: avatarMovement 1.5s infinite alternate ease-in-out;
+}
+
+@-webkit-keyframes avatarMovement {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  to {
+    -webkit-transform: translateY(1%);
+            transform: translateY(1%);
+  }
+}
+
+@keyframes avatarMovement {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  to {
+    -webkit-transform: translateY(1%);
+            transform: translateY(1%);
+  }
+}
+
+.main-section {
+  position: relative;
+}
+
+.main-section .scroll-up-container {
+  width: 40%;
+  min-height: 220vh;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.main-section .scroll-up-container .scroll-up-wrapper {
+  width: 100%;
+  min-height: 220vh;
+  position: relative;
+}
+
+.main-section .scroll-up-container .scroll-up-wrapper .scroll-up {
+  height: 5rem;
+  width: 3rem;
+  border: 0.2rem solid black;
+  border-radius: 3rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90%;
+  left: 95%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.main-section .scroll-up-container .scroll-up-wrapper .scroll-up::before,
+.main-section .scroll-up-container .scroll-up-wrapper .scroll-up::after {
+  content: '';
+  position: absolute;
+  border: 0.2rem solid black;
+  top: 80%;
+  left: 50%;
+  height: 1rem;
+  width: 1rem;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  border-bottom: transparent;
+  border-right: transparent;
+  -webkit-animation: arrowAnimation 1s  ease-in-out infinite;
+          animation: arrowAnimation 1s  ease-in-out infinite;
+  z-index: 3;
+}
+
+.main-section .scroll-up-container .scroll-up-wrapper .scroll-up::before {
+  top: 90%;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+}
+
+@-webkit-keyframes arrowAnimation {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 20%;
+  }
+}
+
+@keyframes arrowAnimation {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 20%;
+  }
+}
+
+.main-section .section-about {
+  min-height: 100vh;
+  width: 90%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main-section .section-about .about-image, .main-section .section-about .about-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  overflow: hidden;
+}
+
+.main-section .section-about .about-text h3 {
+  font-size: 3rem;
+  padding: 0.5rem 0  1rem 0;
+}
+
+.main-section .section-about .about-text p {
+  font-size: 3rem;
+  color: gray;
+}
+
+.main-section .section-projects {
+  min-height: 100vh;
+  background-color: #1ec3d2;
+}
+
+.main-section .section-contact {
+  min-height: 100vh;
+  background-color: aqua;
+}
+
+@media screen and (max-width: 890px) {
+  .nav-links {
+    background: rgba(0, 0, 0, 0.918);
+    position: fixed;
+    left: 0;
+    bottom: 200%;
+    height: 50%;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 0.7s ease-in-out;
+    transition: 0.7s ease-in-out;
+  }
+  .nav-links a {
+    color: white;
+  }
+  .nav-links .active {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .nav-links.open {
+    position: fixed;
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+    height: 100%;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .intro-text h3 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .intro-text p {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .burger {
+    cursor: pointer;
+    z-index: 3;
+    margin: auto;
+  }
+  .burger-element {
+    padding: 0.15rem 1.8rem;
+    background-color: black;
+    margin: 0.7rem 0rem;
+    display: block;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+  #burger-span1.open {
+    -webkit-transform: rotateZ(-45deg) translateY(450%);
+            transform: rotateZ(-45deg) translateY(450%);
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    background-color: white;
+  }
+  #burger-span2.open {
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+  }
+  #burger-span3.open {
+    -webkit-transform: rotateZ(45deg) translateY(-450%);
+            transform: rotateZ(45deg) translateY(-450%);
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    background-color: white;
+  }
+  .scroll-up-container {
+    min-height: 215vh;
+  }
+  .scroll-up-container .scroll-up-wrapper {
+    min-height: 215vh;
+  }
+  .scroll-up-container .scroll-up-wrapper .scroll-up {
+    margin-right: 10%;
+  }
+  svg {
+    width: 100%;
+    min-height: 40vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */
